@@ -7,6 +7,8 @@ resource "aws_subnet" "public" {
 
   tags = {
     Name = "${var.name_prefix}-public-subnet-${count.index}"
+    resourceType = "tf"
+
   }
   
 }
@@ -20,5 +22,6 @@ resource "aws_subnet" "private" {
 
   tags = {
     Name = "${var.name_prefix}-private-subnet-${count.index}"
+    resourceType = "tf"
   }
 }
